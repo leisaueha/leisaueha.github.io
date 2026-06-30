@@ -34,7 +34,8 @@
 .vp-doc a {
   color: var(--vp-c-text-1);
   font-weight: 500;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .vp-doc a:hover {
@@ -52,6 +53,11 @@
   font-size: 1.125rem !important;
   font-weight: 500 !important;
   margin-top: 28px !important;
+}
+
+.vp-doc .header-anchor,
+.post-title a {
+  text-decoration: none;
 }
 
 .blog-index {
