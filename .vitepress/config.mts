@@ -31,7 +31,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/leisaueha/leisaueha.github.io' },
+      { icon: 'github', link: 'https://github.com/leisaueha/' },
       { icon: 'instagram', link: 'https://www.instagram.com/leisaueha/' },
       { icon: 'youtube', link: 'https://www.youtube.com/@leisaueha' }
     ]
