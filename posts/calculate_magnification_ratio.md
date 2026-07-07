@@ -6,6 +6,7 @@ tags:
     - photography
     - macrophotography
     - Raynox DCR-250
+    - AmScope PA4X-INF
 ---
 
 # Calculate magnification ratio
