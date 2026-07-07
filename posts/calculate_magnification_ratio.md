@@ -59,11 +59,11 @@ Now of course this is only calculated in the ideal scenario, and assumes that we
 
 Even more interesting, if we use some microscope objective (think of it just like a lens), we can get even more magnification. Let's take AmScope objective as an example. My limited knowledge of these objectives is basically this. They got either a finite version or an infinity version. The finite vesion like this [PA4X-V300](https://amscope.com/products/pa4x-v300) is designed so that it'll form an image at distance X (160mm in this case) after the lens. Nicholas Sherlock (what a great last name) actually designed an [adapter](https://www.thingiverse.com/thing:5130912) to do exactly that, and Micael Widell has a [video on using it in the field](https://www.youtube.com/watch?v=nuZ_JptlqYE).
 
-Alternative to using the finite version, we can use the infinity version such as the [PA4X-INF](https://amscope.com/products/pa4x-inf?srsltid=AfmBOooNnvpJ6xwmn18ApygljQVXDf5RXRbd1IONkYOVhuzHtqsC3nTz). Infinity means the lens has been collimated so that the light coming out of it is parallel. This means we can <mark>attach it to any lens</mark> which is set to focus to inf, then we'll get an image. I'm not sure what the reference focal length for the PA4X-inf, but let's assume it's also 160mm like the finite version's tube lens, then the magnification ratio is $\frac{f}{160}*10$
+Alternative to using the finite version, we can use the infinity version such as the [PA4X-INF](https://amscope.com/products/pa4x-inf?srsltid=AfmBOooNnvpJ6xwmn18ApygljQVXDf5RXRbd1IONkYOVhuzHtqsC3nTz). Infinity means the lens has been collimated so that the light coming out of it is parallel. This means we can <mark>attach it to any lens</mark> which is set to focus to inf, then we'll get an image. I'm not sure what the reference focal length for the PA4X-inf, but let's assume it's also 160mm like the finite version's tube lens, then the magnification ratio is $\frac{f}{160}*4$
 
-- 125mm telelens, we get 7.8:1 macro
-- 250mm telelens, we get 15.6:1 macro
-- 300mm telelens, we get 18.75:1 macro
+- 125mm telelens, we get 3.125:1 macro
+- 250mm telelens, we get 6.25:1 macro
+- 300mm telelens, we get 7.5:1 macro
 
 I did run some tests with the DCR-250 to see if we can get to a 1:1 ratio using a 125mm base lens, or 2:1 with a 250mm one, and whether the image is actually in focus when the subject is placed about 125mm in front of the Raynox. I also tried the PA4X-INF, which turned out to be an interesting learning experience. But those are all for another post. Meanwhile, here are some test shots.
 
