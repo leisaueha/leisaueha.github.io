@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import mathjax3 from 'markdown-it-mathjax3'
 
 const googleAnalyticsId = 'G-XKS7TN9FJ3'
 
@@ -24,6 +25,11 @@ export default defineConfig({
       gtag('config', '${googleAnalyticsId}');`
     ]
   ],
+  markdown: {
+    config: (md) => {
+      md.use(mathjax3)
+    }
+  },
   themeConfig: {
     website: 'https://github.com/leisaueha/leisaueha.github.io',
     search: {
