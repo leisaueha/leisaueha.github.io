@@ -1,6 +1,6 @@
 ---
 title: Calculate magnification ratio
-date: 2026-06-30
+date: 2026-07-05
 description: how to calculate magnification ratio when using a raynox or a microscope objective with your lens
 tags:
     - photography
