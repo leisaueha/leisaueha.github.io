@@ -1,6 +1,6 @@
 ---
 title: Pawpaw
-date: 2026-06-30
+date: 2026-07-02
 description: delicious native North American fruit tastes just like tropical fruit
 tags:
     - pawpaw
