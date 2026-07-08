@@ -50,7 +50,8 @@ $$
 
 As we can see while DOF is proportional to aperture (f-number N), it’s inversely proportional to the square of focal length f.
 This is why long telephoto lenses can still produce very shallow depth of field and strong background blur, even at a relatively high f-number like f/4.
-Here, we assume the aperture is a circle. In real lenses, it may be more like a polygon. That shape affects the shape of the bokeh.
+
+Also, here we assume the aperture is a circle. In real lenses, it may be more like a polygon. That shape affects the shape of the bokeh.
 
 
 Let's see how it works with the 7Artisans 35mm F0.95.
