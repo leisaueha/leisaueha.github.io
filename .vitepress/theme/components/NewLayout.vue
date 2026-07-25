@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <template #nav-bar-title-after>
+      <small class="site-description">{{ site.description }}</small>
+    </template>
+
     <template #doc-before>
       <div v-if="!$frontmatter.page && $frontmatter.date" class="post-info doc-post-info">
         <time :datetime="convertDate($frontmatter.date)">{{ convertDate($frontmatter.date) }}</time>
@@ -12,9 +16,11 @@
 
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
+import { useData } from 'vitepress'
 import Copyright from './Copyright.vue'
 
 const { Layout } = DefaultTheme
+const { site } = useData()
 
 function convertDate(input: Date | string) {
   if (input instanceof Date && !Number.isNaN(input.getTime())) {

@@ -6,7 +6,7 @@ const googleAnalyticsId = 'G-XKS7TN9FJ3'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "totally a shopper",
-  description: "A simple blog.",
+  description: "just logs of interesting things I learn",
   cleanUrls: true,
   head: [
     [

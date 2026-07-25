@@ -115,6 +115,27 @@
   margin-top: 28px;
 }
 
+.VPNavBarTitle .title {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.site-description {
+  color: var(--vp-c-text-2);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+@media (min-width: 1280px) {
+  .VPNavBarSearch {
+    flex-grow: 0;
+    margin-right: 12px;
+  }
+}
+
 .post-list {
   border-bottom: 1px dashed var(--vp-c-divider);
   padding: 16px 0;
@@ -215,12 +236,23 @@
   gap: 6px 14px;
   justify-content: center;
   padding: 18px 24px;
+  position: relative;
   text-align: center;
 }
 
 .site-footer a {
   color: var(--vp-c-text-2);
   font-weight: 600;
+}
+
+.secret-link {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
 }
 
 @media (min-width: 960px) {
