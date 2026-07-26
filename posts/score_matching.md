@@ -378,11 +378,11 @@ $$
 
 The book mentions 3 problems with this approach:
 
-1. “If the data distribution lies on a manifold of lower dimensionality than the data space, the probability density will be zero at points off the manifold and here the score function is undefined since $\ln p(x)$ is undefined.”
+> **1.** “If the data distribution lies on a manifold of lower dimensionality than the data space, the probability density will be zero at points off the manifold and here the score function is undefined since $\ln p(x)$ is undefined.”
 
-2. “In regions of low data density, the estimate of the score function may be inaccurate since the loss function (20.43) is weighted by the density. An inaccurate score function can lead to poor trajectories when using Langevin sampling.”
+> **2.** “In regions of low data density, the estimate of the score function may be inaccurate since the loss function (20.43) is weighted by the density. An inaccurate score function can lead to poor trajectories when using Langevin sampling.”
 
-3. “Even with an accurate model of the score function, the Langevin procedure may not sample correctly if the data distribution comprises a mixture of disjoint distributions.”
+> **3.** “Even with an accurate model of the score function, the Langevin procedure may not sample correctly if the data distribution comprises a mixture of disjoint distributions.”
 
 All three can be mitigated by using a large enough noise level $\sigma$. We discussed point 1 and 3 in [this post about langevin sampling on mixtured of disjoint distributions](./langevin_sampling_mixture_of_disjoint_distributions.md).
 
