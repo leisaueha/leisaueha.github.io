@@ -518,7 +518,7 @@ z_T=\sigma_T\epsilon,
 $$
 
 ## Example
-I gave this note to Codex and asked it to write a code sample similar to that of [DDPM](./ddpm.md). I trained for 100 epochs, just like with DDPM. The result surprisingly doesn't look very good. There could be many reasons, the first one I can think of is that Langevin sampling probably needs more tuning with that step size. However, overall the result still looks like the model has learned the general structure of MNIST. The book does mention that we can reframe this problem as SDE and reverse SDE, which opens the door to using more advanced SDE solver and get better results. Let's leave that for another day.
+I gave this note to Codex and asked it to write a [code sample](https://github.com/leisaueha/simple_mnist_score_matching) similar to that of [DDPM](./ddpm.md). I trained for 100 epochs, just like with DDPM. The result surprisingly doesn't look very good. There could be many reasons, the first one I can think of is that Langevin sampling probably needs more tuning with that step size. However, overall the result still looks like the model has learned the general structure of MNIST. The book does mention that we can reframe this problem as SDE and reverse SDE, which opens the door to using more advanced SDE solver and get better results. Let's leave that for another day.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe
@@ -530,3 +530,10 @@ I gave this note to Codex and asked it to write a code sample similar to that of
     allowfullscreen>
   </iframe>
 </div>
+
+
+
+## References
+
+- Bishop, C. M., & Bishop, H. (2023). *Deep Learning: Foundations and Concepts*. Springer Nature.
+- Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., & Poole, B. (2021). *Score-Based Generative Modeling through Stochastic Differential Equations*. arXiv:2011.13456. https://arxiv.org/abs/2011.13456
