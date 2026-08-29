@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { inBrowser, useData, withBase } from 'vitepress'
 import { data as posts } from './posts.data'
 
@@ -45,7 +45,18 @@ function syncRequestedPage() {
   requestedPage.value = Number(new URLSearchParams(window.location.search).get('page') ?? '1')
 }
 
-onMounted(syncRequestedPage)
+function selectPage(page: number) {
+  requestedPage.value = page
+}
+
+onMounted(() => {
+  syncRequestedPage()
+  window.addEventListener('popstate', syncRequestedPage)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('popstate', syncRequestedPage)
+})
 
 function generatePaginationArray(pagesNum: number, currentPage: number) {
   const pages = new Set<number>([1, pagesNum])
@@ -93,7 +104,11 @@ function generatePaginationArray(pagesNum: number, currentPage: number) {
       >
         <template v-if="item === '...'">...</template>
         <template v-else-if="item === currentPage">{{ item }}</template>
-        <a v-else :href="pageHref(item as number)">{{ item }}</a>
+        <a
+          v-else
+          :href="pageHref(item as number)"
+          @click="selectPage(item as number)"
+        >{{ item }}</a>
       </span>
     </nav>
   </section>
