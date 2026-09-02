@@ -187,9 +187,11 @@ Now we change the saturation. Go to `Layer` → `New adjustment layer` → `HSL.
 ![affinity_hsl](./moon_stack/affinity_hsl.png)
 ![affinity_hsl_2](./moon_stack/affinity_hsl_2.png)
 
-Here's what I ended up with:
-
+Below is what I ended up with. It's not very sharp, I believe it's due to the video being compressed by youtube.
 ![moon_edited](./moon_stack/moon_edited.jpg)
+
+Here's what I got from the same video before youtube:
+![p100_color](./moon_stack/p100_color.jpg)
 
 
 ## Conclusion
