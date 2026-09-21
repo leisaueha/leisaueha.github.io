@@ -8,9 +8,12 @@ tags:
 ---
 
 # Programmatically pad your photos for Instagram post
+
 2026 and still don't automatically keep the original ratio across photos in a post. Sure, you can post 20 photos, but only from mobile, not desktop. Gotta have their own reason, and it definitely is stupid.
 
 Anyhoos, I know you can use app, but I think most free apps such as lightroom mobile exports one at a time only? maybe, I don't know for sure, but here's another way. You can use python to automatically read and pad your photos one by one so they're ready for instagram posts.
+
+## Desktop
 
 First, create a conda env so you don't mess up your python env, then just `pip install numpy pillow`. Put your photos at the same dir as this script, run, and it'll generate new padded photos in an output directory, ready for posting.  I'm sure there's better way and sure there are ways to make it nicer, but this is a good beginning. This is a quick vibe-coded script using codex btw.
 
@@ -125,3 +128,12 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+## Iphone
+Better yet, we can do all this using ios' shortcut! This is all chatGPT (gosh it's good). After creating the shortcut, simply select photos, click Share -> scroll down to see the action (I named it Padta), then it'll run and you'll see the padded copies appearing in your photo library.
+
+Note that text base64 text is: `iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAIAAADtz9qMAAAADElEQVR4nGNgoBAAAABBAAEWiOBiAAAAAElFTkSuQmCC`. After decoded it becomes all an black png. Needless to say, you can tweak this to have white padding, or user can even select an input.
+
+![pad1](./instagram_padding/IMG_5357-compressed.jpg)
+![pad2](./instagram_padding/IMG_5358-compressed.jpg)
+![pad3](./instagram_padding/IMG_5359-compressed.jpg)
