@@ -134,6 +134,19 @@ Better yet, we can do all this using ios' shortcut! This is all chatGPT (gosh it
 
 Note that text base64 text is: `iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAIAAADtz9qMAAAADElEQVR4nGNgoBAAAABBAAEWiOBiAAAAAElFTkSuQmCC`. After decoded it becomes all an black png. Needless to say, you can tweak this to have white padding, or user can even select an input.
 
-![pad1](./instagram_padding/IMG_5357-compressed.jpg)
-![pad2](./instagram_padding/IMG_5358-compressed.jpg)
-![pad3](./instagram_padding/IMG_5359-compressed.jpg)
+The algorithm is simple:
+
+- we select multiple images
+- for each:
+    + convert to jpg. The reason for this is cropped image still contains original metadata. For example a landscape photo after cropped into portrait can still contain metadata indicating its original format and data, so when get width/height, it results in the wrong width/height. I use highest quality for conversion because jpg is lossy, but for instagram post it doesn't matter lol.
+    + now we get width/height from the converted image.
+    + We want to retrofit into 4:5 ratio, so we choose the frame of size 2160:2700. First we fit our photo into this frame. Depending on the ratio width/height (threshold = 0.8), we resize the height/width accordingly.
+    + Now for the padding, we create a black photo of size 2160:2700. The base64 text above after decoded is an all black image.
+    + now we have the resize photo, a black frame, we just overlay the former to the latter.
+    + save resulted photo to library
+
+Obviously there's a lot of room to improve. We can choose different color as well, and I think this can be done with user input. I wonder if adding curved corners is possible, but this is enough for me.
+
+![pad1](./instagram_padding/IMG_5792.jpg)
+![pad2](./instagram_padding/IMG_5793.jpg)
+![pad3](./instagram_padding/IMG_5794.jpg)
